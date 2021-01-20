@@ -24,3 +24,48 @@ form input, form button{
     font-size: 1.6rem;
     background: white;
 }
+
+form button{
+    color: #c065c0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #c065c0;
+        color: white;
+}
+/* style dropdown*/
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #c065c0;
+    width: 8rem;
+    cursor: pointer;
+    padding: 0.7rem;
+}
+.select::after{
+    content: "\25bc";
+    position: absolute;
+    color: #c065c0;
+    top: 7px;
+    right: 6px;
+    pointer-events: none;
+}
+.select:hover::{
+    color: #583429;
+}
+/*styling container where the tasks are shown
+Start from line 70 on Medium*/
+
