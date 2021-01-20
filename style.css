@@ -1,0 +1,26 @@
+/*remove default styles from the page*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* add background color, image, font& height*/
+
+body{
+font-family:'Bodoni Moda', serif;
+min-height: 100vh;
+}
+
+header, form{
+    display: flex;
+    min-height: 15vh;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.4rem;
+    border: none;
+    font-size: 1.6rem;
+    background: white;
+}

@@ -2,23 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+  <title>Todo list app</title>
 </head>
 <body>
 
-  Todo
+  <header>
+    <h1>TASKS TO BE DONE</h1>
+  </header>
+  <!---input field to enter task and drop down filter----->
+  <form>
+    <input type="text" placeholder="Enter the work" class="todo_input">
+    <button class="todo_button" type="submit">
+      <i class="fas fa-plus-square"></i>
+    </button>
+    <div class="select">
+      <select name="todos" class="filter_todo">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="uncompleted">Uncompleted</option>
+      </select>
+    </div>
+  </form>
+  <!---container for displaying to-do list/tasks using JS--->
+  <div class="todo_container">
+    <ul class="todo_list"></ul>
+  </div>
+  <!----add Javascript----->  
 
-  <!-- Add dynamic number --> items left
+  
+  <script src="/script.js"></script>
+</body>
+</html>
+
+
+<!-- Add dynamic number  items left
 
   All
   Active 
@@ -30,7 +54,5 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html>
+    Coded by <a href="#">Catherine Kiiru</a>.
+  </div> -->
