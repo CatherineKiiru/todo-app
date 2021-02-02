@@ -7,8 +7,8 @@
 /* add background color, image, font& height*/
 
 body{
+background-image: url(/images/bg-desktop-light.jpg);
 font-family:'Bodoni Moda', serif;
-min-height: 100vh;
 }
 
 header, form{
@@ -16,6 +16,7 @@ header, form{
     min-height: 15vh;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 form input, form button{
@@ -34,7 +35,7 @@ form button{
 
 form button:hover{
     background: #c065c0;
-        color: white;
+    color: white;
 }
 /* style dropdown*/
 select{
