@@ -5,9 +5,9 @@ const todoList = document.querySelector ('.todo_list');
 const filterOption = document.querySelector('filter_todo');
 
 //event listeners//
-todoButton.addEventListener('click', addTodo)
-todoList.addEventListener('click', deleteCheck)
-filterOption.addEventListener('click',filterTodo)
+todoButton.addEventListener("click", addTodo)
+todoList.addEventListener("click", deleteCheck)
+filterOption.addEventListener("click",filterTodo)
 
 //functions
 function addTodo(event){
@@ -17,10 +17,10 @@ function addTodo(event){
     todoDiv.classList.add('todo');
     //todo LI:
     const newTodo = document.createElement('li');
-    newTodo.innerText = todoInput.nodeValue;
+    newTodo.innerText = todoInput.Value;
     newTodo.classList.add('todo_item');
     todoDiv.appendChild(newTodo);
-    if(todoInput.value ===''){
+    if(todoInput.value === ""){
         return null
     }
 //check mark BUTTON
@@ -29,32 +29,32 @@ completedButton.innerHTML = '<i class= "fas fa-check"></i>';
 completedButton.classList.add('complete_btn')
 todoDiv.appendChild(completedButton);
 //Delete BUTTON
-const deleteButton = document.cretaeElement('button');
+const deleteButton = document.createElement('button');
 deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
 deleteButton.classList.add('delete_btn')
 todoDiv.appendChild(deleteButton);
 //Append to actual LIST
 todoList.appendChild(todoDiv);
 //Clear todo input VALUE
-todoInput.value = ''
+todoInput.value = ""
 }
 
 //Delete & check
 function deleteCheck (e){
     const item = e.target;
     //delete item
-    if (item.classList[0] ==='delete_btn'){
+    if (item.classList[0] ==="delete_btn"){
         const todo = item.parentElement;
         //animation transition
-        todo.classList.add('fall')
+        todo.classList.add("fall")
         todo.addEventListener('transitionend', function (){
             todo.remove()
         })
     }
     //complete item
-    if (item.classList[0] === 'complete_btn'){
+    if (item.classList[0] === "complete_btn"){
         const todo = item.parentElement;
-        todo.classList.toggle('completedItem')
+        todo.classList.toggle("completedItem")
     }
 }
 //filtering the tasks according to the options
@@ -62,20 +62,22 @@ function filterTodo(e) {
     const todos = todoList.childNodes;
     for(let i = 1; i<todos.length; i++){
         switch (e.target.value){
-            case 'all':
-                todos[i].style.display = 'flex';
+            case "all":
+                todos[i].style.display = "flex";
                 break;
-            case 'completed':
+            case "completed":
                 if (todos[i].classlist.contains('completedItem')){
-                    todos[i].style.display = 'none';
+                    todos[i].style.display = "flex";
+                } else {
+                    todos [i].style.display = "none"
                 }
                 break;
-            case 'uncompleted':
-                if (!todos[i].classList.contains('completedItem')){
-                    todos[i].style.display = 'flex';
-                } else {
-                    todos[i].style.display = 'none';
-                } 
+            case "uncompleted":
+                if (!todos[i].classList.contains('completedItem')) {
+                    todos[i].style.display = "flex";
+                    } else {
+                    todos[i].style.display = "none";
+                    }
                 break;
         }
     }
